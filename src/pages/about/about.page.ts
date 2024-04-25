@@ -8,5 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class AboutPage implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.startComponent();
+  }
+
+  startComponent() {
+    console.log('En About Page');
+  }
 }
