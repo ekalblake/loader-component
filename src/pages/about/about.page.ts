@@ -12,7 +12,5 @@ export class AboutPage implements OnInit {
     this.startComponent();
   }
 
-  startComponent() {
-    console.log('En About Page');
-  }
+  startComponent() {}
 }
