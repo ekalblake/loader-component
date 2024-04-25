@@ -1,20 +1,40 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Bienvenido</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Bienvenido</ion-title>
     </ion-toolbar>
   </ion-header>
-
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-card color="medium">
+      <ion-card-header>
+        <ion-card-title>Inicializar</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-input
+          color="success"
+          label="Introduce el tiempo"
+          type="number"
+          [(ngModel)]="inputValue"
+        >
+        </ion-input>
+        <ion-button color="success" fill="solid" (click)="startLoader()">
+          Iniciar
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>
+<app-loader
+  *ngIf="showLoader"
+  [showLoader]="showLoader"
+  [imageArray]="loaderImages"
+  [textArray]="loaderTexts"
+>
+</app-loader>

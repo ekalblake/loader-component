@@ -1,3 +1,9 @@
-<p>
-  loader works!
-</p>
+<ion-backdrop [visible]="showLoader"> </ion-backdrop>
+
+<ion-card id="box">
+  <img id="image" [src]="imageArray[currentImageIndex]" />
+  <ion-card-header class="ion-text-center">
+    <ion-card-title>{{ currentText }}</ion-card-title>
+    <ion-card-subtitle> <ion-spinner></ion-spinner></ion-card-subtitle>
+  </ion-card-header>
+</ion-card>
