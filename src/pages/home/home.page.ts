@@ -12,20 +12,6 @@ export class HomePage {
   showLoader: boolean = false;
   inputValue!: number;
 
-  loaderImages: string[] = [
-    'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
-    'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-    'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-    'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-  ];
-
-  loaderTexts: string[] = [
-    'Cargando...',
-    'Espera...',
-    'Ya casi...',
-    'Redireccionando...',
-  ];
-
   constructor(
     private toastController: ToastController,
     private homeService: HomeService,
