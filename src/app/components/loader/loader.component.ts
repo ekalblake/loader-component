@@ -42,8 +42,4 @@ export class LoaderComponent implements OnInit {
       this.currentText = this.textArray[this.currentImageIndex];
     }, this.intervalTime);
   }
-
-  setResult() {
-    this.showLoader = false;
-  }
 }
