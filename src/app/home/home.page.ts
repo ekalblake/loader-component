@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class HomePage {
   showLoader: boolean = false;
   inputValue!: number;
+  intervalTime!: number;
 
   constructor(
     private toastController: ToastController,

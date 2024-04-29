@@ -19,7 +19,14 @@
       <ion-card-content>
         <ion-input
           color="success"
-          label="Introduce el tiempo"
+          label="Introduce el tiempo de imágenes"
+          type="number"
+          [(ngModel)]="intervalTime"
+        >
+        </ion-input>
+        <ion-input
+          color="success"
+          label="Introduce el tiempo del componente"
           type="number"
           [(ngModel)]="inputValue"
         >
@@ -31,4 +38,9 @@
     </ion-card>
   </div>
 </ion-content>
-<app-loader *ngIf="showLoader" [showLoader]="showLoader"> </app-loader>
+<app-loader
+  *ngIf="showLoader"
+  [showLoader]="showLoader"
+  [intervalTime]="intervalTime"
+>
+</app-loader>

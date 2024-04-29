@@ -7,15 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class LoaderComponent implements OnInit {
   @Input() showLoader!: boolean;
+  @Input() intervalTime!: number;
 
   imageArray: string[];
   textArray: string[];
   currentImageIndex: number = 0;
   currentText!: string;
-  intervalTime: number;
 
   constructor() {
-    this.intervalTime = 1000;
     this.imageArray = [
       'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
       'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
@@ -40,6 +39,6 @@ export class LoaderComponent implements OnInit {
       this.currentImageIndex =
         (this.currentImageIndex + 1) % this.imageArray.length;
       this.currentText = this.textArray[this.currentImageIndex];
-    }, this.intervalTime);
+    }, this.intervalTime * 1000);
   }
 }
